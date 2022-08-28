@@ -81,6 +81,12 @@ I realized that I could speed up the process by using `for` loops and optimize d
 |Nice|0.11|86|0.01|6|10|
 |Paris|0.16|620|0.01|10|9|
 
+The scores are the mean relative absolute error (i.e. 0.16 means 16% of average error for Paris).
+
+The formula of the model is:
+
+$$ \text{wage} = y_0\ e^{-\alpha \times \text{distance}} + \text{base} $$
+
 ### We'll always have Paris
 
 Paris is a bit tricky... The structure of wages is very different from other cities: the west is pretty rich but the east pretty poor (this comes from the main direction of the winds in Paris!). I will try to find some way to deal with Paris in this [notebook](notebooks/07_paris.ipynb) but I do not really have any idea for the time being apart from regarding Paris suburbs as three different metropolis areas, as if they were totally different areas. This kind of work well for the west part but not for the east part.
